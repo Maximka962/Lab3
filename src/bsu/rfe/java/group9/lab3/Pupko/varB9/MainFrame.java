@@ -247,6 +247,6 @@ public class MainFrame extends JFrame {
 
         MainFrame frame = new MainFrame(coefficients);
         frame.setDefaultCloseOperation(3);
-
+        frame.setVisible(true);
     }
 }
