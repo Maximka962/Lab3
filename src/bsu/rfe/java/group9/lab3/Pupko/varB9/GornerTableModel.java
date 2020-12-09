@@ -58,7 +58,7 @@ public class GornerTableModel extends AbstractTableModel {
         if (col == 0) {
             return "X value";
         } else {
-            return col == 1 ? "Mnogochlen value" : "Restricted symmetry";
+            return col == 1 ? "Polynomial value" : "Restricted symmetry";
         }
     }
 

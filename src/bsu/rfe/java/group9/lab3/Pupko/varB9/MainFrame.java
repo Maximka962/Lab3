@@ -44,7 +44,7 @@ public class MainFrame extends JFrame {
     private GornerTableModel data;
 
     public MainFrame(Double[] coefficients) {
-        super("tab mnogochl po sheme gornera");
+        super("tab polynomial po sheme gornera");
         this.coefficients = coefficients;
         this.setSize(700, 500);
         Toolkit kit = Toolkit.getDefaultToolkit();
