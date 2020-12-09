@@ -87,7 +87,7 @@ public class MainFrame extends JFrame {
         };
         this.saveToGraphicsMenuItem = fileMenu.add(saveToGraphicsAction);
         this.saveToGraphicsMenuItem.setEnabled(false);
-        Action searchValueAction = new AbstractAction("Find the mnogochlen value") {
+        Action searchValueAction = new AbstractAction("Find the polynomial value") {
             public void actionPerformed(ActionEvent event) {
                 String value = JOptionPane.showInputDialog(MainFrame.this, "enter value for search", "Searching for value", 3);
                 MainFrame.this.renderer.setNeedle(value);
@@ -98,7 +98,7 @@ public class MainFrame extends JFrame {
         this.searchValueMenuItem.setEnabled(false);
         Action aboutAction = new AbstractAction("authors") {
             public void actionPerformed(ActionEvent event) {
-                JOptionPane.showMessageDialog(MainFrame.this, "Author:\nSamosyuk Ilya\n9-th group\nv 1.0", "authors", 3);
+                JOptionPane.showMessageDialog(MainFrame.this, "Author:\n Пупко Максим \n9-th group\nv 1.0", "authors", 3);
             }
         };
         aboutMenu.add(aboutAction);
@@ -195,7 +195,7 @@ public class MainFrame extends JFrame {
         try {
             PrintStream out = new PrintStream(selectedFile);
             out.println("results of tab gorners scheme: ");
-            out.print("mnogochlen: ");
+            out.print("polynomial: ");
 
             Double var10001;
             int i;
@@ -225,7 +225,7 @@ public class MainFrame extends JFrame {
 
     public static void main(String[] args) {
         if (args.length == 0) {
-            System.out.println("Impossible to tab th mnogochlen for whom you haven't entered coefficients");
+            System.out.println("Impossible to tab th polynomial for whom you haven't entered coefficients");
             System.exit(-1);
         }
 
