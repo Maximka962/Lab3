@@ -54,7 +54,7 @@ public class MainFrame extends JFrame {
         JMenu fileMenu = new JMenu("File");
         menuBar.add(fileMenu);
         JMenu tableMenu = new JMenu("Table");
-        menuBar.add(tableMenu);
+        menuBar.add(tableMenu);//прошляпил
         JMenu aboutMenu = new JMenu("About");
         menuBar.add(aboutMenu);
         Action saveToTextAction = new AbstractAction("Save to File") {
