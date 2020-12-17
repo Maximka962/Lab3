@@ -60,7 +60,7 @@ public class GornerTableModel extends AbstractTableModel {
         } else {
             return col == 1 ? "Polynomial value" : "Restricted symmetry";
         }
-    }
+    }//тут даже не знаю что и делать с коммитами
 
     public Class<?> getColumnClass(int col) {
         return col == 2 ? Boolean.class : Double.class;

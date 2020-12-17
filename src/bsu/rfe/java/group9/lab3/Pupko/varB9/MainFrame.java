@@ -35,9 +35,10 @@ public class MainFrame extends JFrame {
     private JMenuItem saveToTextMenuItem;
     private JMenuItem saveToGraphicsMenuItem;
     private JMenuItem searchValueMenuItem;
+    private JMenuItem searchValueXMenuItem;
     private JTextField textFieldFrom;
     private JTextField textFieldTo;
-    private JTextField textFieldStep;
+    private JTextField textFieldStep;//ну тут ясное дело вместе с рендерером коммитик забытый
     private Box hBoxResult;
     private DecimalFormat formatter = (DecimalFormat)NumberFormat.getInstance();
     private GornerTableCellRenderer renderer = new GornerTableCellRenderer();
@@ -95,6 +96,15 @@ public class MainFrame extends JFrame {
             }
         };
         this.searchValueMenuItem = tableMenu.add(searchValueAction);
+        this.saveToGraphicsMenuItem.setEnabled(false);
+        Action searchValueXAction = new AbstractAction("Find the X value") {
+            public void actionPerformed(ActionEvent event) {
+                String value = JOptionPane.showInputDialog(MainFrame.this, "enter value for search", "Searching for value", 3);
+                MainFrame.this.renderer.setNeedle2(value);
+                MainFrame.this.getContentPane().repaint();
+            }
+        };
+        this.searchValueMenuItem = tableMenu.add(searchValueXAction);
         this.searchValueMenuItem.setEnabled(false);
         Action aboutAction = new AbstractAction("authors") {
             public void actionPerformed(ActionEvent event) {
